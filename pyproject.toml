@@ -1,0 +1,35 @@
+[project]
+name = "amazon-sp-api-mcp"
+version = "1.0.0"
+description = "Comprehensive MCP for Amazon Selling Partner API"
+authors = [
+    { name = "MCP Creator", email = "[email protected]" }
+]
+dependencies = [
+    "requests>=2.28.0",
+    "boto3>=1.26.0",
+    "botocore>=1.29.0", 
+    "cryptography>=3.4.8",
+    "python-dateutil>=2.8.2",
+    "pydantic>=1.10.0",
+    "mcp>=0.1.0"
+]
+requires-python = ">=3.8"
+readme = "README.md"
+license = { text = "MIT" }
+
+[project.scripts]
+amazon-sp-api-mcp = "amazon_sp_api_mcp.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0", 
+    "black>=22.0.0",
+    "isort>=5.0.0",
+    "mypy>=1.0.0"
+]
